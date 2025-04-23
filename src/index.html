@@ -1,35 +1,49 @@
 <!doctype html>
 <html lang="en">
-  <head>
+  <head>   
     <meta charset="UTF-8" />
     <link rel="icon" href="./assets/img/4geeks.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello Rigo with Vanilla.js</title>
-
+    <link rel="stylesheet" href="style.css">
     <!-- Fontawesome is our recomended library for icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-    <!-- Write your HTML code here, you can delete everything withing the body tags -->
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./assets/img/rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
-      </div>
-    </div>
+    <div class="container">
+      <div class="row align-items-center pb-3 border-bottom">
+        <div class="col d-flex justify-content-center">
+          <img src="https://media.istockphoto.com/id/1269211670/es/vector/rock-papel-tijeras-conjunto-de-iconos-de-partes-del-cuerpo.jpg?s=612x612&w=0&k=20&c=GUYVPaBrY6ZJQUIcJKj0n4uXee90wziYxg6YP1ZBcs4=" alt="" srcset="" style="width:8rem;">
+          <h1 class="mt-5"> Pick your play</h1>
 
+        </div>
+
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <button type="button" id="rock" class="btn btn-primary mx-2"><i class="fa-solid fa-hand-back-fist"></i></button>
+        <button type="button" id="papel" class="btn btn-success mx-2 "><i class="fa-solid fa-hand"></i></button>
+        <button type="button" id="tijera" class="btn btn-danger mx-2 "><i class="fa-solid fa-hand-scissors"></i></button>
+        <button type="button" id="lagarto" class="btn btn-secondary mx-2 "><i class="fa-solid fa-hand-lizard"></i></button>
+        <button type="button" id="spock" class="btn btn-warning mx-2 "><i class="fa-solid fa-hand-spock"></i></button>
+      </div>
+      <div class="card d-flex justify-content-center mt-3">
+        <h2 id="choice" class="m-0">Tu elegiste:</h2>
+        <h2 id="pcChoice" class="m-0"> La computadora eligio:</h2>
+        <h2 id="win" class="m-0">¿Quien ganara?</h2>        
+      </div>
+      <div class="d-flex justify-content-center mt-4">
+        <button type="button" id="playerButton" class="btn btn-danger mx-2"></button>
+        <h2> VS</h2>
+        <button type="button" id="pcButton" class="btn btn-success mx-2 "></button>
+        </div>
+
+    </div>
+    
     <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
     <script type="module" src="/app.js"></script>
+    <!-- canvas confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
   </body>
 </html>

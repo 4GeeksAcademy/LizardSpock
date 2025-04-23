@@ -1,5 +1,4 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
-
-body{
-    background: white;
+body, div,h2{
+    background-color: antiquewhite;
 }
